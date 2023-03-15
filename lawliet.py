@@ -4,7 +4,6 @@ import socket
 import collections
 from subprocess import check_output
 from rich.console import Console
-from rich.progress import track
 from bs4 import BeautifulSoup
 from threading import Thread
 from rich.table import Table

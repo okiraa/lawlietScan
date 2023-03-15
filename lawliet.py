@@ -181,7 +181,6 @@ class Scan:
 if len(argv) != 3:
     print(banner("green"))
     print("[yellow][!] Use: python3 lawliet.py [url] [wordlist.txt]\n  → Use -w No Final Para Usar a Wordlist Padrão.")
-    print("[yellow][!] If You Want to Run a Proxy Server:\n  → python3 lawliet.py [host] [port]")
     exit()
 elif argv[2] in ("-w", "-W", "--w", "--W"):
     scan = Scan(argv[1], "wordlists/wordlist.txt")

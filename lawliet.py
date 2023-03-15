@@ -178,18 +178,6 @@ class Scan:
         except KeyboardInterrupt:
             print("\n[red][-] Interrompido Pelo Usuario!")
 
-#implementar.
-class Proxy:
-    def __init__(self, host, port):
-        self.host = host
-        self.port = int(port)
-
-    def runProxy(self):
-        self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-        self.sock.bind((self.host, self.port))
-        self.sock.listen(10)
-
 if len(argv) != 3:
     print(banner("green"))
     print("[yellow][!] Use: python3 lawliet.py [url] [wordlist.txt]\n  → Use -w No Final Para Usar a Wordlist Padrão.")
@@ -199,8 +187,5 @@ elif argv[2] in ("-w", "-W", "--w", "--W"):
     scan = Scan(argv[1], "wordlists/wordlist.txt")
     scan.run()
 else:
-    if isinstance(int(argv[2]), int):
-        print("ainda não foi implementada.")
-        exit()
     scan = Scan(argv[1], argv[2])
     scan.run()
